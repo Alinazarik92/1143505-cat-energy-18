@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+      <meta charset="UTF-8">
+      <title>HTML Academy: Cat Energy. Подбор программы.</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html" aria-label="Главная страница">
+        <img src="https://via.placeholder.com/191x39" width="191" height="39" alt="Логотип магазина питания для котов Cat Energy">
+      </a>
+      <nav class="main-nav">
+        <a class="main-nav__burger" href="main-nav.html" aria-label="Меню"></a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html" aria-label="Главная">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html" aria-label="Каталог продукции">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" aria-label="Подбор программы">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="form-main">
+      <h1 class="form-main__title">Подбор программы</h1>
+      <p class="form-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <form class="form-main__form form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="form__cat-data cat-data">
+          <legend class="visually-hidden">Данные кота</legend>
+          <label class="cat-data__text" for="name">Имя:*</label>
+          <input class="cat-data__field user-data__field--name" id="name" name="name" type="text" placeholder="Барсик" required>
+          <label class="cat-data__text" for="weight">Вес (кг):*</label>
+          <input class="cat-data__field user-data__field--weight" id="weight" name="weight" type="number" placeholder="7" required>
+          <label class="cat-data__text" for="age">Возраст (лет):</label>
+          <input class="cat-data__field user-data__field--age" id="age" name="age" type="number" placeholder="7">
+        </fieldset>
+        <fieldset class="form__target target">
+          <legend class="visually-hidden">Цель питания</legend>
+          <input class="target__toggle" id="losing-weight" name="target" value="losing-weight" type="radio" checked>
+          <label class="target__text" for="losing-weight">Похудение</label>
+          <input class="target__toggle" id="mass-gain" name="target" value="mass-gain" type="radio">
+          <label class="target__text" for="mass-gain">Набор массы</label>
+          <input class="target__toggle" id="need-advise" name="target" value="need-advise" type="radio">
+          <label class="target__text" for="need-advise">Не знаю (Нужен ваш совет)</label>
+        </fieldset>
+        <fieldset class="form__user-data user-data">
+          <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
+          <label class="user-data__text" for="email">Имя:*</label>
+          <input class="user-data__field user-data__field--email" id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required>
+          <label class="user-data__text" for="tel">Телефон:*</label>
+          <input class="user-data__field user-data__field--tel" id="tel" name="tel" type="tel" placeholder="8 (960) 900-60-90" required>
+        </fieldset>
+        <fieldset class="form__comment comment">
+          <legeng class="comment__title">Комментарий</legeng>
+          <label class="visually-hidden" for="comment">Повадки кота</label>
+          <textarea class="comment__text" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="form__other other">
+          <legend class="other__title"></legend>
+          <input class="other__toggle" id="sweetener" name="other" value="sweetener" type="checkbox" checked>
+          <label class="other__text" for="sweetener">Сахарозаменитель</label>
+          <input class="other__toggle" id="water" name="other" value="water" type="checkbox">
+          <label class="other__text" for="water">Питьевая вода</label>
+          <input class="other__toggle" id="milk" name="other" value="milk" type="checkbox">
+          <label class="other__text" for="milk">Молоко</label>
+          <input class="other__toggle" id="vitamins" name="other" value="vitamins" type="checkbox">
+          <label class="other__text" for="vitamins">Витамины</label>
+        </fieldset>
+        <button class="form__button green-button" type="submit">Отправить заявку</button>
+        <p class="form__text">* — Обязательные поля</p>
+      </form>
+    <section class="form-main__location location">
+      <h2 class="visually-hidden">Расположение</h2>
+      <p class="location__collaboration">Приглашаем к сотрудничеству дилеров!</p>
+      <p class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="location__map">
+        <iframe src="https://via.placeholder.com/320x400" width="320" height="400"></iframe>
+      </div>
+    </section>
+    </main>
+    <footer class="page-footer">
+      <img class="page-footer__logo" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип магазина питания для котов Cat Energy">
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="#nowhere" aria-label="Мы во ВКонтакте"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#nowhere" aria-label="Мы в Инстаграмм"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#nowhere" aria-label="Мы на Фейсбуке"></a>
+        </li>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">HTML Academy</a>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy"></a>
+        </div>
+      </ul>
+    </footer>
+
+  </body>
+</html>
