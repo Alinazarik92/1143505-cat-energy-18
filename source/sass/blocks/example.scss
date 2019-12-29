@@ -18,7 +18,6 @@
 
 .example__text {
   width: 100%;
-  @include arial;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -34,9 +33,9 @@
 }
 
 .example__cost {
-
+  width: 100%;
 }
 
 .example__slider {
-
+  width: 100%;
 }

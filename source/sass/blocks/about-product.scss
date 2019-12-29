@@ -1,24 +1,28 @@
 .about-product {
   width: 100%;
   margin: 0 0 42px;
-  padding: 0 20px;
+  padding: 0 $padding-mobile;
 }
 
 .about-product__title {
+  @include oswald;
+
   width: 100%;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
-  margin: 0;
-  padding: 0 0 35px;
+  color: $black-2;
+  margin: 0 0 35px;
+  padding: 0;
 }
 
 .about-product__list {
   @include default-list;
+  @include style-reset;
+
   display: flex;
   flex-direction: column;
   width: 100%;
-  @include style-reset;
 }
 
 .about-product__item {
@@ -27,52 +31,117 @@
   min-height: 60px;
   margin: 0 0 20px;
   padding: 0 0 0 80px;
-}
 
-.about-product__item::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  width: 60px;
-  height: 60px;
-  background-color: $leaf;
-}
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $leaf;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-.about-product__item--ingredients::after {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  content: url("../../img/advantage-leaf@1x.png");
-}
+  &--ingredients::before {
+    background-image: url("../../img/advantage-leaf@1x.png");
+  }
 
-.about-product__item--preparation::after {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  content: url("../../img/advantage-powder@1x.png");
-}
+  &--preparation::before {
+    background-image: url("../../img/advantage-powder@1x.png");
+  }
 
-.about-product__item--periodicity::after {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  content: url("../../img/advantage-dining@1x.png");
-}
+  &--periodicity::before {
+    background-image: url("../../img/advantage-dining@1x.png");
+  }
 
-.about-product__item--result::after {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  content: url("../../img/advantage-clock@1x.png");
+  &--result::before {
+    background-image: url("../../img/advantage-clock@1x.png");
+  }
 }
 
 .about-product__text {
+  @include style-reset;
+
   width: 100%;
-  @include arial;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: $light-black;
-  @include style-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .about-product {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  .about-product__title {
+    font-size: 60px;
+    margin-bottom: 63px;
+  }
+
+  .about-product__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about-product__item {
+    @include style-reset;
+
+    width: 324px;
+    min-height: 315px;
+    margin: 0 0 87px;
+    padding: 117px 110px 0 0;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      @include oswald;
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: 230px;
+      height: 71px;
+      font-size: 281px;
+      line-height: 281px;
+      font-weight: 400;
+      color: $light-grey;
+    }
+
+    &--ingredients::after {
+      content: "1";
+    }
+
+    &--preparation::after {
+      content: "2";
+    }
+
+    &--periodicity::after {
+      content: "3";
+    }
+
+    &--result::after {
+      content: "4";
+    }
+  }
+
+  .about-product__text {
+    @include arial;
+    @include style-reset;
+
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $light-black;
+  }
 }
