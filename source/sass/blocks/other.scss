@@ -1,3 +1,8 @@
 .other {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  border-top: 3px $leaf solid;
+  margin: 0 0 42px;
+  padding: 0 $padding-mobile 0;
 }

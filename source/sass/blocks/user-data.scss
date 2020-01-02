@@ -1,3 +1,83 @@
 .user-data {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  border-top: 3px $leaf solid;
+  margin: 0 0 42px;
+  padding: 0 $padding-mobile 0;
+}
+
+.user-data__title {
+  width: 241px;
+  margin-bottom: 30px;
+}
+
+.user-data__input-area {
+  @include style-reset;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.user-data__label {
+  @include oswald;
+
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black-2;
+  margin: 0 12px 0 0;
+  padding: 0;
+}
+
+.user-data__input {
+  @include oswald;
+
+  flex-grow: 1;
+  width: 100%;
+  height: 45px;
+  border: 1px $very-light-grey solid;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $light-black;
+  margin: 0;
+  padding: 15px 48px 15px 16px;
+
+  &:placeholder {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $light-black;
+  }
+}
+
+.user-data__img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--email {
+    width: 18px;
+    height: 14px;
+    right: 15px;
+  }
+
+  &--tel {
+    width: 21px;
+    height: 21px;
+    right: 13px;
+  }
+
+  & path {
+    fill: $black-2;
+  }
 }

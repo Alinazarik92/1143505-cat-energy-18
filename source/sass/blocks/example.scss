@@ -8,10 +8,13 @@
 }
 
 .example__title {
+  @include oswald;
+
   width: 100%;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
+  color: $black;
   margin: 33px 0;
   padding: 0;
 }
@@ -33,7 +36,17 @@
 }
 
 .example__cost {
+  @include oswald;
+
   width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0 0 44px;
+  padding: 0;
 }
 
 .example__slider {

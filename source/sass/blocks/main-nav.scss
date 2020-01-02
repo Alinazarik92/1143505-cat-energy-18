@@ -138,7 +138,10 @@
 
   .main-nav__link {
     font-size: 20px;
-    color: $white;
+
+    &--index {
+      color: $white;
+    }
   }
 }
 

@@ -5,6 +5,8 @@
 }
 
 .example-area__title {
+  @include oswald;
+
   width: 124px;
   height: 56px;
   text-align: center;
@@ -14,6 +16,7 @@
   line-height: 24px;
   font-weight: 400;
   text-transform: uppercase;
+  color: $black;
   margin: 0;
   padding: 13px 5px 15px;
 }
