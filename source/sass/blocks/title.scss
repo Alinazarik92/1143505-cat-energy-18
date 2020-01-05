@@ -11,3 +11,14 @@
   padding-left: $padding-mobile;
   padding-right: 25px;
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: -23px;
+    margin-left: -41px;
+    padding-left: 41px;
+    padding-right: 41px;
+  }
+}

@@ -2,7 +2,7 @@
   @include style-reset;
   width: 100%;
   min-height: 65px;
-  border-bottom: 1px $light-grey solid;
+  border-bottom: 1px $grey-lines solid;
 }
 
 .main-nav__top {
@@ -55,7 +55,7 @@
 
 .main-nav__item {
   width: 100%;
-  border-top: 1px $light-grey solid;
+  border-top: 1px $grey-lines solid;
   text-align: center;
   margin: 0;
   padding: 24px $padding-mobile;
