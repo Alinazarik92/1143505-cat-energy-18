@@ -30,23 +30,80 @@
 }
 
 .example__block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   margin: 0 0 38px;
   padding: 0;
 }
 
-.example__cost {
+.example__area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 124px;
+  margin: 0;
+}
+
+.example__result {
   @include oswald;
 
-  width: 100%;
+  width: 124px;
+  height: 56px;
   text-align: center;
+  border: $grey-border-index 1px solid;
+  border-radius: 5px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0;
+  padding: 13px 5px 15px;
+}
+
+.example__indicator {
+  width: 82px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: $light-black;
+  background-color: $light-grey;
+  margin: -8px 0 0;
+  padding: 0;
+}
+
+.example__cost-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 44px;
+  padding: 0;
+}
+
+.example__cost {
+  @include oswald;
+  @include style-reset;
+
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: $black;
-  margin: 0 0 44px;
-  padding: 0;
+  margin-right: 5px;
+}
+
+.example__cost-number {
+  @include oswald;
+  @include style-reset;
+
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black;
 }
 
 .example__slider {
