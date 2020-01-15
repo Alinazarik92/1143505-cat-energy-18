@@ -1,0 +1,24 @@
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__link svg {
+  width: 41px;
+  height: 41px;
+}
+
+.copyright__link path {
+  fill: $index-svg-fill;
+}
+
+.copyright__text {
+  @include style-reset;
+
+  width: 114px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $light-black;
+}
