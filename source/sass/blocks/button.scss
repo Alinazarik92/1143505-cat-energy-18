@@ -1,4 +1,6 @@
 .button {
+  @include oswald;
+
   display: block;
   width: 280px;
   min-height: 40px;

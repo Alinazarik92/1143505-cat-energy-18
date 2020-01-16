@@ -1,13 +1,12 @@
 .copyright__link {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__link svg {
-  width: 37px;
-  height: 39px;
-  margin: -12px 0 0;
-  padding: 0;
+  width: 41px;
+  height: 41px;
 }
 
 .copyright__link path {
@@ -15,12 +14,11 @@
 }
 
 .copyright__text {
+  @include style-reset;
+
   width: 114px;
-  height: 16px;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   color: $light-black;
-  margin: 0;
-  padding: 0;
 }
