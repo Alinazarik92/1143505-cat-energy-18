@@ -5,11 +5,9 @@
 
 .location__text {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: $light-grey;
   margin: 0;
-  padding: 31px $padding-mobile 26px;
+  padding: 27px $padding-mobile 26px;
 }
 
 .location__collaboration {
@@ -19,9 +17,9 @@
   width: 136px;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
   color: $black;
   text-transform: uppercase;
+  margin-right: 6px;
 }
 
 .location__address {
@@ -40,7 +38,7 @@
 
 .location__map {
   width: 100%;
-  height: 400px;
+  height: 366px;
   background-image: url("../../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,8 +47,9 @@
 
 @media (min-width: $tablet-width) {
   .location__text {
+    justify-content: space-between;
     background-color: $white;
-    padding: 59px 71px 69px;
+    padding: 66px 71px 58px;
   }
 
   .location__collaboration {
@@ -63,13 +62,15 @@
     width: 155px;
     text-align: right;
     font-size: 16px;
+    margin-top: -3px;
   }
 
   .location__address p {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   .location__map {
+    height: 396px;
     background-image: url("../../img/bg-map-tablet@1x.png");
   }
 }
@@ -91,6 +92,10 @@
     margin: 0;
     flex-shrink: 0;
     z-index: 1;
+  }
+
+  .location__address {
+    text-align: left;
   }
 
   .location__map {

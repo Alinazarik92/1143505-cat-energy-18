@@ -1,6 +1,7 @@
 .add-product-card {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .add-product-card__title {
@@ -9,33 +10,31 @@
   width: 100%;
   font-size: 16px;
   line-height: 16px;
-  font-weight: 400;
   color: $black-2;
   text-transform: uppercase;
-  margin: 0 0 15px;
+  margin: 0 0 10px;
   padding: 0;
-}
-
-.add-product-card__table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0 0 17px;
-  padding: 0;
-}
-
-.add-product-card_line {
-  height: 14px;
 }
 
 .add-product-card__indicator {
+  width: 50%;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
   color: $light-black;
+  margin: 0 0 13px;
+  padding: 0;
 }
 
 .add-product-card__value {
+  width: 50%;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $light-black;
   text-align: right;
+  margin: 0 0 13px;
+  padding: 0;
 }
 
 .add-product-card__button {
@@ -43,43 +42,33 @@
 }
 
 @media (min-width: $tablet-width) {
-  .add-product-card {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
   .add-product-card__title {
     width: 50%;
     font-size: 20px;
     margin-bottom: 27px;
   }
 
-  .add-product-card__table {
-    width: 50%;
-    margin-bottom: 22px;
-  }
-
-  .add-product-card_line {
-    height: 26px;
-  }
-
   .add-product-card__indicator {
+    width: 35%;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+    margin-bottom: 22px;
   }
 
   .add-product-card__value {
-    width: 95px;
+    width: 15%;
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
+    margin-bottom: 22px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .add-product-card {
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: center;
     padding: 15px 0 16px;
   }
 
@@ -88,22 +77,20 @@
     margin-bottom: 0;
   }
 
-  .add-product-card__table {
-    width: 325px;
-    margin-bottom: 0;
-  }
-
-  .add-product-card_line {
-    height: 26px;
-  }
-
   .add-product-card__indicator {
+    width: 245px;
     text-align: left;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .add-product-card__value {
     width: 80px;
     text-align: left;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .add-product-card__button {
