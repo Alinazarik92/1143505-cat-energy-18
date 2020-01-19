@@ -1,14 +1,16 @@
 .product-card {
   width: 280px;
-  min-height: 210px;
+  min-height: 145px;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   margin: 0 auto;
   padding: 0;
 }
 
 .product-card__image-link {
   width: 140px;
+  height: 144px;
 }
 
 .product-card__description {
@@ -16,18 +18,18 @@
   flex-direction: column;
   width: 140px;
   margin: 0;
-  padding: 25px 0 0;
+  padding: 21px 0 0;
 }
 
 .product-card__link {
   @include oswald;
 
-  width: 75px;
+  width: 76px;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
   color: $black;
-  margin: 0 0 18px;
+  text-transform: uppercase;
+  margin: 0 0 13px;
   padding: 0;
 }
 
@@ -46,10 +48,12 @@
 
 .product-card__indicator {
   text-align: left;
+  padding: 0;
 }
 
 .product-card__value {
   text-align: right;
+  padding: 0;
 }
 
 .product-card__button {

@@ -3,8 +3,8 @@
   flex-direction: column;
   width: 100%;
   background-color: $light-grey;
-  margin: 0 0 31px;
-  padding: 33px $padding-mobile 38px;
+  margin: 0;
+  padding: 17px 0 36px;
 }
 
 .example__info {
@@ -14,7 +14,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 44px;
+  margin: 0;
+  padding: 0 $padding-mobile 34px;
 }
 
 .example__title {
@@ -25,7 +26,7 @@
   line-height: 60px;
   font-weight: 400;
   color: $black;
-  margin: 0 0 33px;
+  margin: 0 0 23px;
   padding: 0;
 }
 
@@ -35,7 +36,7 @@
   line-height: 18px;
   font-weight: 400;
   color: $light-black;
-  margin: 0 0 27px;
+  margin: 0 0 25px;
   padding: 0 10px 0 0;
 }
 
@@ -53,7 +54,7 @@
   min-height: 56px;
   border: $grey-border-index 1px solid;
   border-radius: 5px;
-  margin-bottom: 38px;
+  margin-bottom: 34px;
 }
 
 .example__result {
@@ -75,7 +76,7 @@
   display: block;
   position: absolute;
   left: 50%;
-  bottom: -15px;
+  bottom: -16px;
   width: 82px;
   transform: translateX(-50%);
   text-align: center;
@@ -89,10 +90,11 @@
 }
 
 .example__cost-container {
+  @include style-reset;
+
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 0;
 }
 
 .example__cost {
@@ -126,8 +128,9 @@
   .example {
     background-color: transparent;
     border-top: 1px $grey-lines solid;
+    margin-top: -34px;
     margin-bottom: 0;
-    padding: 51px 0 0 0;
+    padding: 43px 0 0 0;
   }
 
   .example__info {
@@ -135,21 +138,19 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 80px;
-    padding-left: $padding-tablet;
-    padding-right: $padding-tablet;
+    align-items: flex-start;
+    padding: 0 $padding-tablet 52px;
   }
 
   .example__title {
     font-size: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 64px;
   }
 
   .example__text {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 56px;
+    margin-bottom: 53px;
     padding-right: 32px;
   }
 
@@ -166,7 +167,7 @@
   .example__result {
     font-size: 30px;
     line-height: 37px;
-    padding: 22px 23px 24px;
+    padding: 14px 23px 24px;
   }
 
   .example__indicator {
@@ -174,7 +175,7 @@
     background-color: $white;
     font-size: 14px;
     line-height: 14px;
-    margin-top: -12px;
+    bottom: -9px;
     padding: 3px 9px 3px 8px;
   }
 
@@ -182,13 +183,13 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     width: 184px;
-    margin: 0;
+    padding-top: 11px;
   }
 
   .example__cost {
     font-size: 20px;
     margin-right: 0;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
   }
 
   .example__cost-number {
@@ -198,65 +199,15 @@
 
 @media (min-width: $desktop-width) {
   .example {
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     border-top: none;
+    margin-top: -70px;
     margin-bottom: 0;
     padding-top: 0;
-
-    &::after {
-      width: 25.9%;
-    }
-  }
-
-  .example__info {
-    @include style-reset;
-
-    width: 439px;
-    z-index: 2;
-  }
-
-  .example__title {
-    margin-bottom: 142px;
-  }
-
-  .example__text {
-    margin-bottom: 71px;
-    padding-right: 0;
-  }
-
-  .example__block {
-    margin-bottom: 59px;
-  }
-
-  .example__indicator {
-    background-color: $light-grey;
-  }
-
-  .example__cost-container {
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 75px;
-  }
-
-  .example__cost {
-    margin-right: 64px;
-    margin-bottom: 0;
-  }
-
-  .example__cost-number {
-    font-size: 20px;
-  }
-
-  .example__slider {
-    width: 600px;
-  }
-}
-
-@media (min-width: $desktop-lg-width) {
-  .example {
-    padding-left: $padding-desktop;
-    position: relative;
+    padding-left: $padding-tablet;
 
     &::after {
       position: absolute;
@@ -270,7 +221,53 @@
     }
   }
 
+  .example__info {
+    @include style-reset;
+
+    width: 439px;
+    z-index: 2;
+    padding-top: 118px;
+    padding-bottom: 73px;
+  }
+
+  .example__title {
+    margin-bottom: 146px;
+  }
+
+  .example__text {
+    margin-bottom: 68px;
+    padding-right: 0;
+  }
+
+  .example__block {
+    margin-bottom: 15px;
+  }
+
+  .example__indicator {
+    background-color: $light-grey;
+  }
+
+  .example__cost-container {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .example__cost {
+    margin-right: 64px;
+    margin-bottom: 0;
+  }
+
+  .example__cost-number {
+    font-size: 20px;
+  }
+
   .example__slider {
-    width: 768px;
+    width: 790px;
+  }
+}
+
+@media (min-width: $desktop-lg-width) {
+  .example {
+    padding-left: $padding-desktop;
   }
 }

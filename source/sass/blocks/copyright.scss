@@ -2,14 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: opacity $transition;
+  margin-left: -1px;
 }
 
 .copyright__link svg {
   width: 41px;
   height: 41px;
+  margin-right: -7px;
 }
 
 .copyright__link path {
+  transition: fill $transition;
   fill: $index-svg-fill;
 }
 
@@ -21,4 +27,17 @@
   line-height: 16px;
   font-weight: 400;
   color: $light-black;
+}
+
+@media (min-width: $desktop-width) {
+  .copyright__link:hover path,
+  .copyright__link:focus path {
+    fill: $leaf;
+  }
+
+  .copyright__link {
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
