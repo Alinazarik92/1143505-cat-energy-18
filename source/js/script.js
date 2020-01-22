@@ -39,3 +39,16 @@
   };
   toggle.addEventListener('click', onClickToggle);
 })();
+
+// var form = document.querySelector('.form');
+// var input = form.querySelectorAll('input[required]');
+//
+// form.addEventListener('submit', function (event) {
+//   event.preventDefault();
+//
+//   for (var i = 0; i < input.length; i++) {
+//     if (!input[i].value) {
+//       input.classList.add('input--error');
+//     }
+//   }
+// });
