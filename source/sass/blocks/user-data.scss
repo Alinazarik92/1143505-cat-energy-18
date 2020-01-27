@@ -4,12 +4,12 @@
   width: 100%;
   border-top: 3px $leaf solid;
   margin: 0 0 42px;
-  padding: 0 $padding-mobile 0;
+  padding: 0 $padding-mobile 0 19px;
 }
 
 .user-data__title {
-  width: 241px;
-  margin-bottom: 30px;
+  width: 222px;
+  margin-bottom: 34px;
 }
 
 .user-data__container {
@@ -24,7 +24,7 @@
 
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   margin: 0 0 14px;
   padding: 0;
@@ -44,7 +44,11 @@
   text-transform: uppercase;
   color: $black-2;
   margin: 0 12px 0 0;
-  padding: 0;
+  padding: 13px 0 0;
+}
+
+.user-data__input-area--tel .user-data__label {
+  margin-right: 10px;
 }
 
 .user-data__input {
@@ -62,7 +66,7 @@
   outline: none;
   transition: border $transition, box-shadow $transition;
   margin: 0;
-  padding: 15px 48px 15px 16px;
+  padding: 15px 53px 15px 19px;
 
   &:placeholder {
     font-size: 16px;
@@ -80,45 +84,59 @@
     border-color: $light-black;
     box-shadow: inset 0 0 1px 1px $light-black;
   }
+
+  &--error {
+    border-color: #ff8282;
+    box-shadow: inset 0 0 1px 1px #ff8282;
+
+    &:hover,
+    &:focus {
+      border-color: #ff8282;
+      box-shadow: inset 0 0 1px 1px #ff8282;
+    }
+  }
 }
 
-.user-data__input:focus + .user-data__img path {
-  transition: fill $transition;
+.user-data__input:focus + svg {
   fill: $leaf;
 }
 
-.user-data__img {
+.user-data__input + svg {
   position: absolute;
+  transition: fill $transition;
   top: 50%;
   transform: translateY(-50%);
+  fill: $black-2;
+}
 
-  &--email {
-    width: 18px;
-    height: 14px;
-    right: 15px;
-  }
+.user-data__input-area--email svg {
+  width: 18px;
+  height: 14px;
+  right: 15px;
+}
 
-  &--tel {
-    width: 21px;
-    height: 21px;
-    right: 13px;
-  }
+.user-data__input-area--tel svg {
+  width: 21px;
+  height: 21px;
+  right: 13px;
+}
 
-  & path {
-    fill: $black-2;
-  }
+.user-data__input--error + svg,
+.user-data__input--error:hover + svg,
+.user-data__input--error:focus + svg {
+  fill: #ff8282;
 }
 
 @media (min-width: $tablet-width) {
   .user-data {
     margin-bottom: 87px;
-    padding-left: 72px;
+    padding-left: 71px;
     padding-right: 65px;
   }
 
   .user-data__title {
-    width: 638px;
-    margin-bottom: 70px;
+    width: 593px;
+    margin-bottom: 76px;
   }
 
   .user-data__input-area {
@@ -128,19 +146,33 @@
   .user-data__label {
     font-size: 20px;
     line-height: 20px;
-    margin-right: 15px;
+    padding-top: 15px;
+    margin-right: 19px;
+  }
+
+  .user-data__input-area--tel .user-data__label {
+    margin-right: 16px;
+    margin-left: -3px;
   }
 
   .user-data__input {
     height: 52px;
     font-size: 20px;
     line-height: 20px;
-    padding: 17px 58px 15px 22px;
+    padding: 13px 58px 15px 19px;
 
     &:placeholder {
       font-size: 20px;
       line-height: 20px;
     }
+  }
+
+  .user-data__input-area--email svg {
+    right: 21px;
+  }
+
+  .user-data__input-area--tel svg {
+    right: 18px;
   }
 }
 
@@ -153,11 +185,15 @@
     width: 570px;
     margin-bottom: 0;
   }
+
+  .user-data__input-area--email .user-data__label {
+    margin-right: 21px;
+  }
 }
 
 @media (min-width: $desktop-lg-width) {
   .user-data {
-    padding-left: $padding-desktop;
+    padding-left: 41px;
     padding-right: $padding-desktop;
   }
 }

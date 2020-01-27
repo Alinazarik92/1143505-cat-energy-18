@@ -39,7 +39,7 @@
 
 @media (min-width: $desktop-width) {
   .page-header {
-    padding-top: 53px;
+    padding-top: 52px;
   }
 
   .page-header__logo {
@@ -47,15 +47,13 @@
     height: 60px;
   }
 
-  .page-header__logo[href] {
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
+  .page-header__logo[href]:hover,
+  .page-header__logo[href]:focus {
+    opacity: 0.8;
+  }
 
-    &:active {
-      opacity: 0.6;
-    }
+  .page-header__logo[href]:active {
+    opacity: 0.6;
   }
 
   .page-header__logo img {

@@ -1,20 +1,17 @@
-.copyright__link {
+.copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
   outline: none;
   cursor: pointer;
   transition: opacity $transition;
-  margin-left: -1px;
 }
 
-.copyright__link svg {
+.copyright svg {
   width: 41px;
   height: 41px;
+  margin-top: 2px;
   margin-right: -7px;
-}
-
-.copyright__link path {
   transition: fill $transition;
   fill: $index-svg-fill;
 }
@@ -22,7 +19,8 @@
 .copyright__text {
   @include style-reset;
 
-  width: 114px;
+  width: auto;
+  flex-grow: 1;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -30,14 +28,12 @@
 }
 
 @media (min-width: $desktop-width) {
-  .copyright__link:hover path,
-  .copyright__link:focus path {
+  .copyright:hover svg,
+  .copyright:focus svg {
     fill: $leaf;
   }
 
-  .copyright__link {
-    &:active {
-      opacity: 0.3;
-    }
+  .copyright:active {
+    opacity: 0.3;
   }
 }

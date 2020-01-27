@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  justify-content: center;
+  padding: 22px 8px 17px 0;
 }
 
 .social__item {
@@ -30,13 +32,16 @@
   transition: opacity $transition;
 }
 
-.social__link path,
-.social__link circle {
+.social__link svg {
   transition: fill $transition;
   fill: $index-svg-fill;
 }
 
 @media (min-width: $tablet-width) {
+  .social {
+    padding: 8px 0 0 16px;
+  }
+
   .social__item {
     margin-right: 27px;
 
@@ -46,6 +51,7 @@
 
     &--insta {
       padding-top: 3px;
+      padding-left: 1px;
     }
   }
 
@@ -67,16 +73,12 @@
 }
 
 @media (min-width: $desktop-width) {
-  .social__link:hover path,
-  .social__link:hover circle,
-  .social__link:focus path,
-  .social__link:focus circle {
+  .social__link:hover svg,
+  .social__link:focus svg {
     fill: $leaf;
   }
 
-  .social__link {
-    &:active {
-      opacity: 0.3;
-    }
+  .social__link:active {
+    opacity: 0.3;
   }
 }
